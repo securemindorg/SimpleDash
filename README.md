@@ -74,9 +74,13 @@ Using [Material Design Icons](https://pictogrammers.com/library/mdi/). Reference
 ## Structure
 
 ├── index.html # Main HTML file
+
 ├── style.css # Styling
+
 ├── script.js # Dashboard logic
+
 ├── links.yaml # Configuration
+
 └── uploads/ # Background images
 
 ## Browser Support
