@@ -1,3 +1,6 @@
+![image](https://github.com/user-attachments/assets/01dc0a0d-b23a-49fd-9c88-ca213f6ae000)
+
+
 # Personal Dashboard
 
 ## Inspired by FLAME Dashboard but significantly simplified
