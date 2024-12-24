@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Roboto:wght@400;500&display=swap');
+
+/* Background image */
+body {
+    margin: 0;
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+body:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("./uploads/20240616_084929.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    z-index: -999;
+    filter: blur(0.0rem);
+    opacity: 0.8;
+}
+
+/* Widen Container Layout */
+.Layout_Container__2Hv3J {
+    padding: 1.25rem 0 !important;
+}
+
+/* Sets Overall Grid Handling */
+.AppGrid_AppGrid__33iLW {
+    /* Three Column Layout */
+    grid-template-columns: repeat(3, minmax(18.75rem, 18.75rem)) !important;
+    /* Full Width Layout */
+    /*grid-template-columns: repeat(auto-fit, minmax(18.75rem, 18.75rem)) !important; */
+    align-items: left !important;
+    column-gap: 3.125rem !important;
+    row-gap: 1.2rem !important; 
+}
+
+/* AppCard Customisation */
+.AppCard_AppCard__1V2_0 {
+    padding: 0.8rem !important;
+    border-radius: 0.6rem !important;
+    background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Application tile hover color */
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .AppCard_AppCard__1V2_0:hover {
+        backdrop-filter: blur(15px);
+        background-color: rgba(0, 0, 0, 0.6) !important;
+    }
+}
+
+/* Push description to reasonable space */
+.AppCard_AppCardDetails__tbAhY h5 {
+    font-size: 0.7692rem !important;
+    padding-bottom: 0.625rem !important;
+}
+
+/* Settings button style */
+.Home_SettingsButton__Qvn8C {
+    border-radius: 0.5rem !important;
+}
+
+/* Links Grid Layout */
+.links-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: calc(50% - 1rem);
+}
+
+.column {
+    min-width: 0;
+    width: 100%;
+}
+
+.category-section {
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.category-title {
+    color: #228B22;
+    margin-bottom: 1rem;
+    background: rgba(3, 3, 3, 0.452);
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(34, 139, 34, 0.3);
+    padding-bottom: 0.5rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.link-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0.4rem;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.link-item:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.link-item .material-icons {
+    margin-right: 0.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .links-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Add media query for responsive design */
+@media (max-width: 1200px) {
+    .links-grid {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+main {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.links-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: calc(50%);
+}
+
+.calendar-frame {
+    width: calc(50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calendar-content {
+    width: 80%;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    min-height: 600px;
+}
+
+.calendar-tabs {
+    width: 80%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.6rem;
+}
+
+.calendar-iframe {
+    width: 100% !important;
+    height: 80vh !important;
+    border-radius: 0.4rem;
+}
+
+@media (max-width: 1200px) {
+    main {
+        flex-direction: column;
+    }
+    
+    .links-grid,
+    .calendar-frame {
+        width: 100%;
+    }
+}
+
+.column:first-child .category-section:first-child {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+}
+
+.column:first-child .category-section:first-child .link-item {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    margin-right: auto !important;
+}
+
+.links-wrapper {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+}
+
+/* Add specific debugging styles */
+.category-section {
+    border: 1px solid transparent; /* Debug border */
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.icon-wrapper {
+    min-width: 24px;
+    margin-right: 0.5rem;
+    padding-top: 0.2rem;
+}
+
+.icon-wrapper i {
+    font-size: 20px;
+}
+
+.link-name {
+    font-size: 0.95rem;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+
+.link-description {
+    font-size: 0.75rem;
+    opacity: 0.8;
+    color: #e0e0e0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+#calendar-container iframe {
+    height: 100vh;
+    width: 80%;
+}
+
+.calendar-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.calendar-tab {
+    padding: 0.5rem 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 0.4rem;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.calendar-tab:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.calendar-tab.active {
+    background: rgba(34, 139, 34, 0.5);
+}
+
+.calendar-iframe {
+    border-radius: 0.4rem;
+}
+
+.upper-section {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.6rem;
+}
+
+.docker-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.docker-service {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.docker-service:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.lower-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0.6rem;
+}
+
+.column {
+    min-width: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .docker-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.docker-title {
+    color: #228B22;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(34, 139, 34, 0.3);
+    padding-bottom: 0.5rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.welcome-section {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.6rem;
+    text-align: center;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.welcome-message {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+#links-container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 0.6rem;
+    width: 90%;
+    margin: 0 auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    width: 100%;
+    flex: 1;
+}
+
+.sections-wrapper {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+}
+
+.links-section {
+    flex: 1;
+}
+
+.calendar-section {
+    flex: 1;
+}
+
+.upper-section {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.lower-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0.6rem;
+}
+
+.column {
+    min-width: 0;
+    width: 100%;
+}
+
+/* Make sure calendar takes full width of its section */
+.calendar-tabs, 
+.calendar-content {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0.6rem;
+    padding: 1rem;
+}
+
+.calendar-iframe {
+    width: 100% !important;
+    height: 70vh !important;
+}
+
+.main-container {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 2rem;
+    border-radius: 0.6rem;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1800px;
+}
+
+.sections-wrapper {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+}
+
+.links-section {
+    flex: 1;  /* Take up available space */
+    width: 50%;
+}
+
+.calendar-section {
+    flex: 1;  /* Take up available space */
+    width: 50%;
+}
+
+@media (max-width: 1200px) {
+    .sections-wrapper {
+        flex-direction: column;
+    }
+    
+    .links-section,
+    .calendar-section {
+        width: 100%;
+    }
+}
+
+/* All sections and elements - fully transparent */
+.upper-section,
+.lower-section,
+.calendar-tabs, 
+.calendar-content,
+.calendar-tab,
+.welcome-section,
+.category-section,
+.category-title,
+.docker-title,
+.docker-grid {
+    background: rgba(0, 0, 0, 0.0);
+    border-radius: 0.3rem;
+    padding: 0rem;
+}
+
+.link-item,
+.docker-service,
+.category-title{
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 0.3rem;
+    padding: 0rem;
+}
+
+/* Hover states - slightly darker */
+.link-item:hover,
+.docker-service:hover,
+.calendar-tab:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transition: background 0.2s ease;
+}
+
+/* Active calendar tab state */
+.calendar-tab.active {
+    background: rgba(34, 139, 34, 0.5);
+}

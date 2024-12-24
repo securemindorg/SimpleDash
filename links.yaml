@@ -1,0 +1,145 @@
+# Docker Services Section
+# List your local applications/services here
+# - name: Display name of the service
+# - url: Local IP or domain where the service is hosted
+# - icon: Material Design Icon name (without the mdi- prefix)
+# - description: Brief description of the service
+docker_services:
+  - name: "CASAOS"
+    url: "http://192.168.1.123"
+    icon: "docker"
+    description: "Local services"
+  - name: "ExcelDraw"
+    url: "http://192.168.1.123"
+    icon: "docker"
+    description: "Local services"
+
+# Column Layout Configuration
+# Define which categories appear in each column
+# - left: Categories to appear in the left column
+# - middle: Categories to appear in the middle column
+# - right: Categories to appear in the right column
+columns:
+  left:
+    - Communication
+    - Entertainment
+  middle:
+    - Local Services
+  right:
+    - Profiles
+    - Tools
+    - Productivity
+
+# Categories List
+# Define all available categories
+# These should match the category names used in the links section
+categories:
+  - Profiles
+  - Communication
+  - Entertainment
+  - Productivity
+  - Tools
+  - Local Services
+
+# Links Section
+# List all your links here
+# - name: Display name of the link
+# - url: Web address
+# - icon: Material Design Icon name (without the mdi- prefix) https://pictogrammers.com/library/mdi/
+# - description: Brief description of the link
+# - category: Must match one of the categories defined above
+links:
+  - name: GitHub
+    url: https://github.com
+    icon: github
+    description: "Personal code repositories and contributions"
+    category: Profiles
+  
+  - name: Linkedin
+    url: https://linkedin.com
+    icon: linkedin
+    description: "Professional network and CV"
+    category: Profiles
+
+  - name: ResearchGate
+    url: https://researchgate.net
+    icon: school
+    description: "Academic publications and research"
+    category: Profiles
+  
+  - name: Personal Gmail
+    url: https://mail.google.com
+    icon: gmail
+    description: "Personal email account"
+    category: Communication
+
+  - name: College Outlook
+    url: https://outlook.office.com/mail/
+    icon: microsoft-outlook
+    description: "College email account"
+    category: Communication
+  
+  - name: Slack
+    url: https://slack.com
+    icon: slack
+    description: "Team communication platform"
+    category: Communication
+  
+  - name: Netflix
+    url: https://netflix.com
+    icon: netflix
+    description: "Streaming service"
+    category: Entertainment
+  
+  - name: YouTube
+    url: https://youtube.com
+    icon: youtube
+    description: "Video streaming service"
+    category: Entertainment
+  
+  - name: Spotify
+    url: https://spotify.com
+    icon: movie
+    description: "Music streaming service"
+    category: Entertainment
+
+  - name: Google Drive
+    url: https://drive.google.com
+    icon: folder
+    description: "Cloud storage and file sharing"
+    category: Productivity
+
+  - name: Google Docs
+    url: https://docs.google.com
+    icon: folder
+    description: "Cloud storage and file sharing"
+    category: Productivity
+  
+  - name: ExcelDraw
+    url: http://192.168.1.123
+    icon: docker
+    description: "Local services"
+    category: Local Services
+
+# Calendar Section
+# Configure Google Calendar embeds
+# - name: Display name for the calendar tab
+# - url: Google Calendar embed URL
+calendars:
+  - name: "Calendar 1"
+    url: "https://calendar.google.com/calendar/embed?src=youremail@gmail.com&bgcolor=%23000000&color=%23ffffff&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&showTz=1&mode=WEEK&ctz=America%2FNew_York"
+  - name: "Calendar 2"
+    url: "https://calendar.google.com/calendar/embed?src=your_email@gmail.com&bgcolor=%23000000&color=%23ffffff&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&showTz=1&mode=WEEK&ctz=America%2FNew_York"
+
+# Welcome Messages
+# Configure different messages for different times of day
+# Times are:
+# - Morning: 5:00 AM - 11:59 AM
+# - Afternoon: 12:00 PM - 4:59 PM
+# - Evening: 5:00 PM - 8:59 PM
+# - Night: 9:00 PM - 4:59 AM
+welcome_messages:
+  morning: "Good Morning!"
+  afternoon: "Good Afternoon!"
+  evening: "Good Evening!"
+  night: "Good Night!"
