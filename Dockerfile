@@ -1,9 +1,21 @@
+# Use official Python runtime as base image
 FROM python:3.9-slim
 
+# Set working directory in container
 WORKDIR /app
 
-COPY * .
+# Copy the entire project directory
+COPY . .
 
-EXPOSE 8000
+# Install Flask
+RUN pip install flask
 
-CMD ["python3", "-m", "http.server", "8000"]
+# Make port 5000 available to the world outside this container
+EXPOSE 5000
+
+# Define environment variable
+ENV FLASK_APP=app.py
+ENV FLASK_ENV=development
+
+# Run app.py when the container launches
+CMD ["flask", "run", "--host=0.0.0.0"]
