@@ -40,6 +40,17 @@ A minimalist web-based dashboard featuring categorized links, local applications
    ```
 4. Visit `http://localhost:8000` in your browser
 
+
+### Running with docker
+
+1.) Build the docker image
+``` sudo docker build -t simpledash . ```
+
+2.) Run the container
+``` sudo docker run -d -p 5000:5000 simpledash ```
+obviously, you'll need to customize the host port, add a directory if you want to edit thing, etc...
+
+
 ### Configuration
 
 #### 1. Background Image
