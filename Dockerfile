@@ -4,13 +4,16 @@ FROM python:3.9-slim
 # Set working directory in container
 WORKDIR /app
 
-# Create a directory for persistent data
-RUN mkdir -p /app/data
+# Create data directory for mounted volume
+RUN mkdir -p /app/data/static
 
-# Copy only the application code (excluding static content)
-COPY requirements.txt .
+# Copy application files (excluding static content)
 COPY app.py .
-# ... copy other necessary application files ...
+COPY requirements.txt .
+COPY templates templates/
+COPY icon.png .
+COPY LICENSE .
+COPY README.md .
 
 # Install Flask
 RUN pip install flask
@@ -18,11 +21,12 @@ RUN pip install flask
 # Make port 5000 available
 EXPOSE 5000
 
-# Define environment variable
+# Define environment variables
 ENV FLASK_APP=app.py
 ENV FLASK_ENV=development
+ENV STATIC_FOLDER=/app/data/static
 
-# Create a volume mount point
+# Create volume mount point for static content
 VOLUME /app/data
 
 # Run app.py when the container launches
