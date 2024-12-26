@@ -86,16 +86,23 @@ In `style.css`:
 Using [Material Design Icons](https://pictogrammers.com/library/mdi/). Reference icons without the `mdi-` prefix in `links.yaml`.
 
 ## Structure
-
-├── index.html # Main HTML file
-
-├── style.css # Styling
-
-├── script.js # Dashboard logic
-
-├── links.yaml # Configuration
-
-└── uploads/ # Background images
+```
+.
+├── app.py              # Flask application
+├── Dockerfile          # Container configuration
+├── requirements.txt    # Python dependencies
+├── setup.sh           # Container initialization script
+├── templates/         # HTML templates
+│   └── index.html
+└── static/           # Static files (copied to volume)
+    ├── css/
+    │   └── style.css
+    ├── js/
+    │   └── script.js
+    ├── uploads/
+    │   └── background.jpg
+    └── links.yaml
+```
 
 ## Browser Support
 
