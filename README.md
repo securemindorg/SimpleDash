@@ -164,3 +164,6 @@ docker run -d -p 5000:5000 -v "%APPDATA%/SimpleDash:/app/data" simpledash
 # For Linux/Mac:
 docker run -d -p 5000:5000 -v "$HOME/.simpledash:/app/data" simpledash
 ```
+## Security
+
+Please note this is not intended to be a secure app, don't make it publically accessable
