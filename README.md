@@ -127,3 +127,33 @@ MIT License
 ## Contributing
 
 Feel free to submit issues and pull requests for improvements!
+
+### Docker Deployment
+
+#### Option 1: Pull from Docker Hub
+```bash
+# Pull the image
+docker pull securemindorg/simpledash:latest
+
+# Run the container
+# For Windows:
+docker run -d -p 5000:5000 -v "%APPDATA%/SimpleDash:/app/data" securemindorg/simpledash:latest
+
+# For Linux/Mac:
+docker run -d -p 5000:5000 -v "$HOME/.simpledash:/app/data" securemindorg/simpledash:latest
+```
+
+#### Option 2: Build Locally
+1. Build the Docker image:
+```bash
+docker build -t simpledash .
+```
+
+2. Run the container:
+```bash
+# For Windows:
+docker run -d -p 5000:5000 -v "%APPDATA%/SimpleDash:/app/data" simpledash
+
+# For Linux/Mac:
+docker run -d -p 5000:5000 -v "$HOME/.simpledash:/app/data" simpledash
+```
