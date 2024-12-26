@@ -1,0 +1,40 @@
+name: simpledash
+services:
+  main_app:
+    cpu_shares: 10
+    command: []
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+    image: securemindorg/simpledash:latest
+    labels:
+      icon: https://github.com/securemindorg/SimpleDash/blob/main/icon.png?raw=true
+    ports:
+      - target: 5000
+        published: "5000"
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData/SimpleDash
+        target: /app/data/static
+    devices: []
+    cap_add: []
+    environment: []
+    network_mode: bridge
+    privileged: false
+    container_name: ""
+    hostname: ""
+x-casaos:
+  author: self
+  category: self
+  hostname: ""
+  icon: https://github.com/securemindorg/SimpleDash/blob/main/icon.png?raw=true
+  index: /
+  is_uncontrolled: false
+  port_map: "5001"
+  scheme: http
+  store_app_id: quirky_zakir
+  title:
+    custom: SimpleDash
