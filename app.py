@@ -20,6 +20,11 @@ app = Flask(__name__, static_folder=STATIC_FOLDER)
 def index():
     print("Serving index.html")
     return render_template('index.html')
+    
+@app.route('/tradingview')
+def tradingview():
+    print("Serving tv.html")
+    return render_template('tv.html')
 
 @app.route('/static/<path:filename>')
 def custom_static(filename):
