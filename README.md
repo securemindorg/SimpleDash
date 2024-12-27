@@ -13,6 +13,7 @@ A minimalist web-based dashboard featuring categorized links, local applications
 - 🔗 Organized link categories
 - 🐳 Docker service shortcuts
 - 📅 Google Calendar integration
+- 📈 TradingView widget integration
 - 🌙 Dark theme with transparent elements
 - 📱 Responsive design
 - ⚙️ YAML-based configuration
@@ -69,6 +70,11 @@ background-image: url("./uploads/your-image.jpg");
 2. Update `links.yaml`:
 name: "Calendar 1"
 url: "your-calendar-embed-url"
+
+#### 4. TradingView Integration
+1. The widget can be accessed on its own using the ```/tradingview``` route
+2. Customize the widget here: https://www.tradingview.com/widget-docs/widgets/watchlists/market-overview/
+3. Update contents of ```templates/tv.html``` with provided code
 
 
 ## Customization
